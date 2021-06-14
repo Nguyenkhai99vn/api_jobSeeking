@@ -1,10 +1,10 @@
 <?php
 class db{
 
-    private $servername = "localhost";
-    private $username = "root";
-    private $password = "";
-    private $db = "job_seeking";
+    private $servername = "ec2-54-158-232-223.compute-1.amazonaws.com";
+    private $username = "ohotaacccymjth";
+    private $password = "9ac043705e78d8194b5b5653f2e996ce7c8cb16a800783ec65db6f2812a5af17";
+    private $db = "dcvug781gegej4";
     private $conn ;
     public function connect(){
         $this->conn = null;
