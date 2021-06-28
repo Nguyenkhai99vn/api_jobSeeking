@@ -19,7 +19,9 @@
         'ID_Job' => $recruitment->ID_Job,
         'ID_Style' => $recruitment->ID_Style,
         'Title' => $recruitment->Title,
-        'Content' => $recruitment->Content,
+        'Descrip' => $recruitment->Descrip,
+        'Interest' => $recruitment->Interest,
+        'Request' => $recruitment->Request, 
         'Salary' => $recruitment->Salary
     );
 

@@ -19,6 +19,8 @@
     $recruiter->PhoneNumber = $data->PhoneNumber;
     $recruiter->Locat = $data->Locat;
     $recruiter->Assess = $data->Assess;
+    $recruiter->Avatar = $data->Avatar;
+    $recruiter->Cover = $data->Cover;
 
     if($recruiter->create()){
         echo json_encode(array('message', 'recruiter create'));

@@ -13,6 +13,8 @@ class applicants{
     public $Locat;
     public $Assess;
     public $CV;
+    public $Avatar;
+    public $Cover;
     public $ID_Work;
     public $ID_Qualifications;
     public $ID_Rank;
@@ -55,6 +57,8 @@ class applicants{
         $this->Locat = $row['Locat'];
         $this->Assess = $row['Assess'];
         $this->CV = $row['CV'];
+        $this->Avatar = $row['Avatar'];
+        $this->Cover = $row['Cover'];
         $this->ID_Work = $row['ID_Work'];
         $this->ID_Qualifications = $row['ID_Qualifications'];
         $this->ID_Rank = $row['ID_Rank'];
@@ -66,7 +70,7 @@ class applicants{
         $query = "INSERT INTO applicants SET ID_Applicants=:ID_Applicants ,Email=:Email 
                         ,FirstName=:FirstName ,LastName=:LastName ,Gender=:Gender 
                         ,PhoneNumber=:PhoneNumber ,DateOfBirth=:DateOfBirth ,Locat=:Locat 
-                        ,Assess=:Assess ,CV=:CV ,ID_Work=:ID_Work 
+                        ,Assess=:Assess ,CV=:CV ,Avatar=:Avatar ,Cover=:Cover,ID_Work=:ID_Work 
                         ,ID_Qualifications=:ID_Qualifications ,ID_Rank=:ID_Rank";
         
         $stmt = $this->conn->prepare($query);
@@ -83,6 +87,8 @@ class applicants{
         $this->Locat = htmlspecialchars(strip_tags($this->Locat));
         $this->Assess = htmlspecialchars(strip_tags($this->Assess));
         $this->CV = htmlspecialchars(strip_tags($this->CV));
+        $this->Avatar = htmlspecialchars(strip_tags($this->Avatar));
+        $this->Cover = htmlspecialchars(strip_tags($this->Cover));
         $this->ID_Work = htmlspecialchars(strip_tags($this->ID_Work));
         $this->ID_Qualifications = htmlspecialchars(strip_tags($this->ID_Qualifications));
         $this->ID_Rank = htmlspecialchars(strip_tags($this->ID_Rank));
@@ -97,6 +103,8 @@ class applicants{
         $stmt->bindParam(':Locat',$this->Locat);
         $stmt->bindParam(':Assess',$this->Assess);
         $stmt->bindParam(':CV',$this->CV);
+        $stmt->bindParam(':Avatar',$this->Avatar);
+        $stmt->bindParam(':Cover',$this->Cover);
         $stmt->bindParam(':ID_Work',$this->ID_Work);
         $stmt->bindParam(':ID_Qualifications',$this->ID_Qualifications);
         $stmt->bindParam(':ID_Rank',$this->ID_Rank);
@@ -113,7 +121,7 @@ class applicants{
         $query = "UPDATE applicants SET  ID_Applicants=:ID_Applicants ,Email=:Email 
         ,FirstName=:FirstName ,LastName=:LastName ,Gender=:Gender 
         ,PhoneNumber=:PhoneNumber ,DateOfBirth=:DateOfBirth ,Locat=:Locat 
-        ,Assess=:Assess ,CV=:CV ,ID_Work=:ID_Work
+        ,Assess=:Assess ,CV=:CV ,Avatar=:Avatar ,Cover=:Cover,ID_Work=:ID_Work
         ,ID_Qualifications=:ID_Qualifications ,ID_Rank=:ID_Rank WHERE ID_Applicants=:ID_Applicants";
         
         $stmt = $this->conn->prepare($query);
@@ -130,6 +138,8 @@ class applicants{
         $this->Locat = htmlspecialchars(strip_tags($this->Locat));
         $this->Assess = htmlspecialchars(strip_tags($this->Assess));
         $this->CV = htmlspecialchars(strip_tags($this->CV));
+        $this->Avatar = htmlspecialchars(strip_tags($this->Avatar));
+        $this->Cover = htmlspecialchars(strip_tags($this->Cover));
         $this->ID_Work = htmlspecialchars(strip_tags($this->ID_Work));
         $this->ID_Qualifications = htmlspecialchars(strip_tags($this->ID_Qualifications));
         $this->ID_Rank = htmlspecialchars(strip_tags($this->ID_Rank));
@@ -144,6 +154,8 @@ class applicants{
         $stmt->bindParam(':Locat',$this->Locat);
         $stmt->bindParam(':Assess',$this->Assess);
         $stmt->bindParam(':CV',$this->CV);
+        $stmt->bindParam(':Avatar',$this->Avatar);
+        $stmt->bindParam(':Cover',$this->Cover);
         $stmt->bindParam(':ID_Work',$this->ID_Work);
         $stmt->bindParam(':ID_Qualifications',$this->ID_Qualifications);
         $stmt->bindParam(':ID_Rank',$this->ID_Rank);

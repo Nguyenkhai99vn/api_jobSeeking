@@ -9,6 +9,8 @@ class recruiter{
     public $PhoneNumber;
     public $Locat;
     public $Assess;
+    public $Avatar;
+    public $Cover;
 
     //connect db
 
@@ -44,6 +46,8 @@ class recruiter{
         $this->PhoneNumber = $row['PhoneNumber'];
         $this->Locat = $row['Locat'];
         $this->Assess = $row['Assess'];
+        $this->Avatar = $row['Avatar'];
+        $this->Cover = $row['Cover'];
 
         return $stmt;
     }
@@ -51,7 +55,7 @@ class recruiter{
     public function create(){
         $query = "INSERT INTO recruiter SET ID_Recruiter=:ID_Recruiter, RName=:RName 
                         ,Email=:Email ,PhoneNumber=:PhoneNumber 
-                        ,Locat=:Locat ,Assess=:Assess ";
+                        ,Locat=:Locat ,Assess=:Assess,Avatar=:Avatar ,Cover=:Cover";
         
         $stmt = $this->conn->prepare($query);
 
@@ -63,6 +67,8 @@ class recruiter{
         $this->PhoneNumber = htmlspecialchars(strip_tags($this->PhoneNumber));
         $this->Locat = htmlspecialchars(strip_tags($this->Locat));
         $this->Assess = htmlspecialchars(strip_tags($this->Assess));
+        $this->Avatar = htmlspecialchars(strip_tags($this->Avatar));
+        $this->Cover = htmlspecialchars(strip_tags($this->Cover));
 
         $stmt->bindParam(':ID_Recruiter',$this->ID_Recruiter);
         $stmt->bindParam(':RName',$this->RName);
@@ -70,6 +76,8 @@ class recruiter{
         $stmt->bindParam(':PhoneNumber',$this->PhoneNumber);
         $stmt->bindParam(':Locat',$this->Locat);
         $stmt->bindParam(':Assess',$this->Assess);
+        $stmt->bindParam(':Avatar',$this->Avatar);
+        $stmt->bindParam(':Cover',$this->Cover);
 
         if($stmt-> execute()){
             return true ;
@@ -82,7 +90,7 @@ class recruiter{
     public function update(){
         $query = "UPDATE recruiter SET  ID_Recruiter=:ID_Recruiter, RName=:RName 
         ,Email=:Email ,PhoneNumber=:PhoneNumber 
-        ,Locat=:Locat ,Assess=:Assess WHERE ID_Recruiter=:ID_Recruiter";
+        ,Locat=:Locat ,Assess=:Assess ,Avatar=:Avatar ,Cover=:Cover WHERE ID_Recruiter=:ID_Recruiter";
         
         $stmt = $this->conn->prepare($query);
 
@@ -94,6 +102,8 @@ class recruiter{
         $this->PhoneNumber = htmlspecialchars(strip_tags($this->PhoneNumber));
         $this->Locat = htmlspecialchars(strip_tags($this->Locat));
         $this->Assess = htmlspecialchars(strip_tags($this->Assess));
+        $this->Avatar = htmlspecialchars(strip_tags($this->Avatar));
+        $this->Cover = htmlspecialchars(strip_tags($this->Cover));
 
         $stmt->bindParam(':ID_Recruiter',$this->ID_Recruiter);
         $stmt->bindParam(':RName',$this->RName);
@@ -101,6 +111,8 @@ class recruiter{
         $stmt->bindParam(':PhoneNumber',$this->PhoneNumber);
         $stmt->bindParam(':Locat',$this->Locat);
         $stmt->bindParam(':Assess',$this->Assess);
+        $stmt->bindParam(':Avatar',$this->Avatar);
+        $stmt->bindParam(':Cover',$this->Cover);
 
         if($stmt-> execute()){
             return true ;

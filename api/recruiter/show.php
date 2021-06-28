@@ -19,7 +19,9 @@
         'Email'=> $recruiter->Email,
         'PhoneNumber' => $recruiter->PhoneNumber,
         'Locat' => $recruiter->Locat,
-        'Assess' => $recruiter->Assess
+        'Assess' => $recruiter->Assess,
+        'Avatar' => $recruiter->Avatar,
+        'Cover' => $recruiter->Cover,
     );
 
     print_r(json_encode($recruiter_item));

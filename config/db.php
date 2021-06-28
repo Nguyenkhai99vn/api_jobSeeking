@@ -1,10 +1,10 @@
 <?php
 class db{
 
-    private $servername = "localhost";
-    private $username = "root";
-    private $password = "";
-    private $db = "job_seeking";
+    private $servername = "sql4.freesqldatabase.com";
+    private $username = "sql4421894";
+    private $password = "qBgAkf2yKt";
+    private $db = "sql4421894";
     private $conn ;
     public function connect(){
         $this->conn = null;

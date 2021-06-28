@@ -24,7 +24,9 @@
                 'Email'=> $Email,
                 'PhoneNumber' => $PhoneNumber,
                 'Locat' => $Locat,
-                'Assess' => $Assess
+                'Assess' => $Assess,
+                'Avatar' => $Avatar,
+                'Cover' => $Cover
             );
             array_push($recruiter_array['recruiter'],$recruiter_item);
         }

@@ -18,7 +18,9 @@
     $recruitment->ID_Job = $data->ID_Job;
     $recruitment->ID_Style = $data->ID_Style;
     $recruitment->Title = $data->Title;
-    $recruitment->Content = $data->Content;
+    $recruitment->Descrip = $data->Descrip;
+    $recruitment->Interest = $data->Interest;
+    $recruitment->Request  = $data->Request;
     $recruitment->Salary = $data->Salary;
 
     if($recruitment->create()){

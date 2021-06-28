@@ -24,7 +24,9 @@
                 'ID_Job' => $ID_Job,
                 'ID_Style' => $ID_Style,
                 'Title' => $Title,
-                'Content' => $Content,
+                'Descrip' => $Descrip,
+                'Interest' => $Interest,
+                'Request' => $Request,
                 'Salary' => $Salary
             );
             array_push($recruitment_array['recruitment'],$recruitment_item);

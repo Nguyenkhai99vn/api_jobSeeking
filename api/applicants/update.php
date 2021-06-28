@@ -23,6 +23,8 @@
     $applicants->Locat = $data->Locat;
     $applicants->Assess = $data->Assess;
     $applicants->CV = $data->CV;
+    $applicants->Avatar = $data->Avatar;
+    $applicants->Cover = $data->Cover;
     $applicants->ID_Work = $data->ID_Work;
     $applicants->ID_Qualifications = $data->ID_Qualifications;
     $applicants->ID_Rank = $data->ID_Rank;

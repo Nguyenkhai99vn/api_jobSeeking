@@ -29,6 +29,8 @@
                 'Locat' => $Locat,
                 'Assess' => $Assess,
                 'CV' => $CV,
+                'Avatar' => $Avatar,
+                'Cover' => $Cover,
                 'ID_Work' => $ID_Work,
                 'ID_Qualifications' => $ID_Qualifications,
                 'ID_Rank' => $ID_Rank

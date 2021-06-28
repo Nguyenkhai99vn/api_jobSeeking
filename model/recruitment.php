@@ -8,7 +8,9 @@ class recruitment{
     public $ID_Job;
     public $ID_Style;
     public $Title;
-    public $Content;
+    public $Descrip;
+    public $Interest;
+    public $Request;
     public $Salary;
     //connect db
 
@@ -43,7 +45,9 @@ class recruitment{
         $this->ID_Job = $row['ID_Job'];
         $this->ID_Style = $row['ID_Style'];
         $this->Title = $row['Title'];
-        $this->Content = $row['Content'];
+        $this->Descrip = $row['Descrip'];
+        $this->Interest = $row['Interest'];
+        $this->Request = $row['Request'];
         $this->Salary = $row['Salary'];
 
         return $stmt;
@@ -52,7 +56,7 @@ class recruitment{
     public function create(){
         $query = "INSERT INTO recruitment SET ID_Recruitment=:ID_Recruitment ,ID_Recruiter=:ID_Recruiter 
         ,ID_Job=:ID_Job ,ID_Style=:ID_Style ,Title=:Title 
-        ,Content=:Content ,Salary=:Salary";
+        ,Descrip=:Descrip ,Interest=:Interest ,Request=:Request ,Salary=:Salary";
         
         $stmt = $this->conn->prepare($query);
 
@@ -63,7 +67,9 @@ class recruitment{
         $this->ID_Job = htmlspecialchars(strip_tags($this->ID_Job));
         $this->ID_Style = htmlspecialchars(strip_tags($this->ID_Style));
         $this->Title = htmlspecialchars(strip_tags($this->Title));
-        $this->Content = htmlspecialchars(strip_tags($this->Content));
+        $this->Descrip = htmlspecialchars(strip_tags($this->Descrip));
+        $this->Interest = htmlspecialchars(strip_tags($this->Interest));
+        $this->Request = htmlspecialchars(strip_tags($this->Request));
         $this->Salary = htmlspecialchars(strip_tags($this->Salary));
 
         $stmt->bindParam(':ID_Recruitment',$this->ID_Recruitment);
@@ -71,7 +77,9 @@ class recruitment{
         $stmt->bindParam(':ID_Job',$this->ID_Job);
         $stmt->bindParam(':ID_Style',$this->ID_Style);
         $stmt->bindParam(':Title',$this->Title);
-        $stmt->bindParam(':Content',$this->Content);
+        $stmt->bindParam(':Descrip',$this->Descrip);
+        $stmt->bindParam(':Interest',$this->Interest);
+        $stmt->bindParam(':Request',$this->Request);
         $stmt->bindParam(':Salary',$this->Salary);
 
         if($stmt-> execute()){
@@ -85,7 +93,7 @@ class recruitment{
     public function update(){
         $query = "UPDATE recruitment SET ID_Recruitment=:ID_Recruitment ,ID_Recruiter=:ID_Recruiter 
         ,ID_Job=:ID_Job ,ID_Style=:ID_Style ,Title=:Title 
-        ,Content=:Content ,Salary=:Salary WHERE ID_Recruitment=:ID_Recruitment";
+        ,Descrip=:Descrip ,Interest=:Interest ,Request=:Request,Salary=:Salary WHERE ID_Recruitment=:ID_Recruitment";
         
         $stmt = $this->conn->prepare($query);
 
@@ -96,7 +104,9 @@ class recruitment{
         $this->ID_Job = htmlspecialchars(strip_tags($this->ID_Job));
         $this->ID_Style = htmlspecialchars(strip_tags($this->ID_Style));
         $this->Title = htmlspecialchars(strip_tags($this->Title));
-        $this->Content = htmlspecialchars(strip_tags($this->Content));
+        $this->Descrip = htmlspecialchars(strip_tags($this->Descrip));
+        $this->Interest = htmlspecialchars(strip_tags($this->Interest));
+        $this->Request = htmlspecialchars(strip_tags($this->Request));
         $this->Salary = htmlspecialchars(strip_tags($this->Salary));
 
         $stmt->bindParam(':ID_Recruitment',$this->ID_Recruitment);
@@ -104,7 +114,9 @@ class recruitment{
         $stmt->bindParam(':ID_Job',$this->ID_Job);
         $stmt->bindParam(':ID_Style',$this->ID_Style);
         $stmt->bindParam(':Title',$this->Title);
-        $stmt->bindParam(':Content',$this->Content);
+        $stmt->bindParam(':Descrip',$this->Descrip);
+        $stmt->bindParam(':Interest',$this->Interest);
+        $stmt->bindParam(':Request',$this->Request);
         $stmt->bindParam(':Salary',$this->Salary);
 
         if($stmt-> execute()){

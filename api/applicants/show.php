@@ -24,6 +24,8 @@
         'Locat' => $applicants->Locat,
         'Assess' => $applicants->Assess,
         'CV' => $applicants->CV,
+        'Avatar' => $applicants->Avatar,
+        'Cover' => $applicants->Cover,
         'ID_Work' => $applicants->ID_Work,
         'ID_Qualifications' => $applicants->ID_Qualifications,
         'ID_Rank' => $applicants->ID_Rank
