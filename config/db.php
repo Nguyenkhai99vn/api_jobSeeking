@@ -1,10 +1,10 @@
 <?php
 class db{
 
-    private $servername = "sql4.freesqldatabase.com";
-    private $username = "sql4421894";
-    private $password = "qBgAkf2yKt";
-    private $db = "sql4421894";
+    private $servername = "remotemysql.com";
+    private $username = "QXdKkTak6C";
+    private $password = "JveZTqi5ya";
+    private $db = "QXdKkTak6C";
 
     private $conn ;
     public function connect(){
