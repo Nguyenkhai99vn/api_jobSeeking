@@ -1,10 +1,10 @@
 <?php
 class db{
 
-    private $servername = "remotemysql.com";
-    private $username = "QXdKkTak6C";
-    private $password = "JveZTqi5ya";
-    private $db = "QXdKkTak6C";
+    private $servername = "mysql-38338-0.cloudclusters.net";
+    private $username = "admin";
+    private $password = "0jHQURMq";
+    private $db = "jobseeking";
 
     private $conn ;
     public function connect(){
