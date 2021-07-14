@@ -15,7 +15,7 @@ class rank{
 
     // read data
     public function read(){
-        $query = "SELECT * FROM rank ORDER BY ID_Rank DESC";
+        $query = "SELECT * FROM ranks ORDER BY ID_Rank DESC";
         
         $stmt = $this->conn->prepare($query);
 
@@ -24,7 +24,7 @@ class rank{
     }
 
     public function show(){
-        $query = "SELECT * FROM rank WHERE ID_Rank=? LIMIT 1";
+        $query = "SELECT * FROM ranks WHERE ID_Rank=? LIMIT 1";
         
         $stmt = $this->conn->prepare($query);
 
@@ -41,7 +41,7 @@ class rank{
     }
 
     public function create(){
-        $query = "INSERT INTO rank SET ID_Rank=:ID_Rank ,RName=:RName";
+        $query = "INSERT INTO ranks SET ID_Rank=:ID_Rank ,RName=:RName";
         
         $stmt = $this->conn->prepare($query);
 
@@ -62,7 +62,7 @@ class rank{
     }
 
     public function update(){
-        $query = "UPDATE rank SET ID_Rank=:ID_Rank ,RName=:RName WHERE ID_Rank=:ID_Rank";
+        $query = "UPDATE ranks SET ID_Rank=:ID_Rank ,RName=:RName WHERE ID_Rank=:ID_Rank";
         
         $stmt = $this->conn->prepare($query);
 
@@ -83,7 +83,7 @@ class rank{
     }
 
     public function delete(){
-        $query = "DELETE FROM rank WHERE ID_Rank=:ID_Rank";
+        $query = "DELETE FROM ranks WHERE ID_Rank=:ID_Rank";
         
         $stmt = $this->conn->prepare($query);
 
